@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COTS 1 ProWeb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ikon SVG (dipakai ulang lewat <use>, tanpa JavaScript) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-inbox" viewBox="0 0 64 56">
+      <path fill="#fff" fill-rule="evenodd" d="M12 2 H52 Q54 2 55 5 L63 30 V50 Q63 54 59 54 H5 Q1 54 1 50 V30 L9 5 Q10 2 12 2 Z M15 9 L9 26 H20 Q22 26 23 29 L24 31 Q25 34 28 34 H36 Q39 34 40 31 L41 29 Q42 26 44 26 H55 L49 9 Z"/>
+    </symbol>
+    <symbol id="i-document" viewBox="0 0 64 64">
+      <path fill="#fff" fill-rule="evenodd" d="M8 2 H38 L56 20 V62 H8 Z M18 33 H46 V38 H18 Z M18 43 H46 V48 H18 Z M18 53 H46 V58 H18 Z"/>
+      <path fill="#fff" fill-opacity=".55" d="M38 2 V20 H56 Z"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 64 56">
+      <path fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round" d="M4 22 C4 11 14 4 27 4 C40 4 50 11 50 22 C50 33 40 40 27 40 C24 40 21 39.500 18 38.800 L8 46 L11 35 C6.500 32 4 27.500 4 22 Z"/>
+      <path fill="#fff" d="M36 42 C46 42 56 38 59 31 C62 36 63 42 61 47 C60 50 61 53 63 55 L54 54 C46 55 40 52 36 47 Z"/>
+    </symbol>
+    <symbol id="i-envelope" viewBox="0 0 48 40">
+      <path d="M4 14 L24 2 L44 14 V36 H4 Z" fill="currentColor"/>
+      <path d="M4 14 L24 28 L44 14" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-folder" viewBox="0 0 24 20">
+      <path d="M1 3 H9 L12 6 H23 V19 H1 Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-file" viewBox="0 0 20 24">
+      <path d="M2 1 H12 L18 7 V23 H2 Z" fill="currentColor"/>
+      <path d="M12 1 V7 H18" fill="none" stroke="#fff" stroke-width="1.5"/>
+      <path d="M5 12 H15 M5 16 H15 M5 20 H15" stroke="#fff" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="i-inbox-sm" viewBox="0 0 24 20">
+      <path d="M3 11 L6 3 H18 L21 11 V18 H3 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M3 11 H9 L10 14 H14 L15 11 H21" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M15 15 L21 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 16 16">
+      <circle cx="8" cy="8" r="8" fill="currentColor"/>
+      <path d="M4.5 8 H11 M8 4.8 L11.2 8 L8 11.2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="header__title">COTS 1 ProWeb</h1>
+    <p class="header__user">Hi, 103092400037 - Muhammad Fauzan Januar</p>
+  </header>
+
+  <!-- TOOLBAR -->
+  <nav class="toolbar" aria-label="Toolbar utama">
+    <div class="toolbar__buttons">
+      <a href="#" class="btn-tool">
+        <svg class="icon icon--inbox" aria-hidden="true"><use href="#i-inbox-sm"/></svg>
+        Incoming Letter
+      </a>
+      <a href="#" class="btn-tool">
+        <svg class="icon icon--folder" aria-hidden="true"><use href="#i-folder"/></svg>
+        My Folder
+      </a>
+    </div>
+    <div class="search">
+      <input type="search" class="search__input" placeholder="Search ..." aria-label="Cari surat">
+      <button type="button" class="search__btn" aria-label="Cari">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- AREA UTAMA -->
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Daftar surat masuk">
+      <h2 class="sidebar__title">Incoming Letter</h2>
+      <ul class="letters">
+        <li class="letter">
+          <svg class="letter__icon" aria-hidden="true"><use href="#i-envelope"/></svg>
+          <div class="letter__body">
+            <p class="letter__sender">Kepala Bagian Akademik Fakultas Informatika TELKOM UNIVERSITY</p>
+            <p class="letter__subject">Permohonan Perubahan Jadwal Praktikum Pemrograman Web</p>
+          </div>
+          <time class="letter__time">
+            <span>30 Oct</span>
+            <span>10:15</span>
+          </time>
+        </li>
+        <li class="letter">
+          <svg class="letter__icon" aria-hidden="true"><use href="#i-envelope"/></svg>
+          <div class="letter__body">
+            <p class="letter__sender">Direktur Kemahasiswaan Telkom University</p>
+            <p class="letter__subject">Undangan Rapat Koordinasi Organisasi Mahasiswa</p>
+          </div>
+          <time class="letter__time">
+            <span>30 Oct</span>
+            <span>15:00</span>
+          </time>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <main class="content">
+      <div class="tabs">
+        <span class="tab tab--active">Dashboard</span>
+      </div>
+
+      <div class="panel">
+        <div class="actions">
+          <a href="#" class="btn-tool">
+            <svg class="icon icon--file" aria-hidden="true"><use href="#i-file"/></svg>
+            Create Internal Letter
+          </a>
+          <a href="#" class="btn-tool">
+            <svg class="icon icon--file" aria-hidden="true"><use href="#i-file"/></svg>
+            Create External Letter
+          </a>
+          <a href="#" class="btn-tool">
+            <svg class="icon icon--file" aria-hidden="true"><use href="#i-file"/></svg>
+            Create Invitational Letter
+          </a>
+        </div>
+
+        <section class="cards" aria-label="Ringkasan surat">
+          <article class="card card--green">
+            <div class="card__top">
+              <svg class="card__icon" aria-hidden="true"><use href="#i-inbox"/></svg>
+              <div class="card__info">
+                <p class="card__count">0</p>
+                <p class="card__label">Need Follow Up</p>
+              </div>
+            </div>
+            <a href="#" class="card__footer">
+              <span>View Details</span>
+              <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="card card--blue">
+            <div class="card__top">
+              <svg class="card__icon" aria-hidden="true"><use href="#i-document"/></svg>
+              <div class="card__info">
+                <p class="card__count">0</p>
+                <p class="card__label">Incoming Letter</p>
+              </div>
+            </div>
+            <a href="#" class="card__footer">
+              <span>View Details</span>
+              <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="card card--red">
+            <div class="card__top">
+              <svg class="card__icon" aria-hidden="true"><use href="#i-chat"/></svg>
+              <div class="card__info">
+                <p class="card__count">0</p>
+                <p class="card__label">Disposition</p>
+              </div>
+            </div>
+            <a href="#" class="card__footer">
+              <span>View Details</span>
+              <svg class="card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </section>
+
+        <section class="todo" aria-label="Todo">
+          <div class="todo__head">
+            <h2 class="todo__title">Todo</h2>
+            <div class="todo__search">
+              <input type="search" class="todo__input" placeholder="Search todo..." aria-label="Cari todo">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+            </div>
+          </div>
+          <p class="todo__empty">You don't have ToDo</p>
+        </section>
+      </div>
+    </main>
+
+  </div>
+
+  </div>
+
+</body>
+</html>
